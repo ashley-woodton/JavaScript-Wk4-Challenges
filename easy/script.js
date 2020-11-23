@@ -4,12 +4,10 @@
 // Input: [10, 5] Output: 7.5
 // Input: [1.5, 3, 2.5, 1] Output: 2
 
+const total = (acc, value) => acc + value;
+
 var arrayAvg = (nums = []) => {
-    var total = 0;
-    for (var i = 0; i < nums.length; i++){
-        total += nums[i];
-    }
-    var avg = total/nums.length;
+    var avg = nums.reduce(total) / nums.length
     return avg;
 }
 
@@ -20,3 +18,4 @@ let c = [1,4,7];
 console.log(arrayAvg(grades));
 console.log(arrayAvg(scores));
 console.log(arrayAvg(c));
+

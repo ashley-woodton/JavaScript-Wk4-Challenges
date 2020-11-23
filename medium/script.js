@@ -6,6 +6,8 @@ function searchArray(x, numbers = []) {
     }
 }
 
+
+
 let num = [3, 5, 6, 4, 9, 7, 0];
 
 console.log(searchArray(5,num));
