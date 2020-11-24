@@ -4,7 +4,7 @@ const total = (acc, value) => acc + value;
 function changeReturn(money = [], amount){
     if (amount <= 0){
         return -1
-    } else if (money.reduce(total) <= 0 && ammount >0){
+    } else if (money.includes(0) && money.length === 1 && amount >0){
         return -1
     }else{
         return coinWays(amount, money)
@@ -57,6 +57,10 @@ console.log(changeReturn(coins1, value1));
 var coins2 = [25, 5, 1];
 var value2 = 90;
 console.log(changeReturn(coins2, value2));
+
+var coins3 = [0];
+var value3 = 10;
+console.log(changeReturn(coins3, value3));
 
 var coins3 = [10];
 var value3 = 10;
